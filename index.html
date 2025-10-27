@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABES Engineering College - Student Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>ABES Engineering College</h1>
+        <p>Student Registration Portal</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#register">Register</a>
+        <a href="#instructions">Instructions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Instructions Section -->
+        <section id="instructions">
+            <h2 class="section-title">Instructions</h2>
+            <p class="instructions-text">
+                Please fill in all the required fields carefully before submitting the registration form. All fields marked with * are mandatory.
+            </p>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register">
+            <h2 class="section-title">Registration Form</h2>
+            
+            <div class="form-container">
+                <form id="registrationForm">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender:</label>
+                            <div class="gender-group">
+                                <div class="gender-option">
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Details -->
+                    <div class="form-section">
+                        <h3>Academic Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="course">Course *</label>
+                            <select id="course" name="course" required>
+                                <option value="">--Select Course--</option>
+                                <option value="btech-cse">B.Tech (CSE)</option>
+                                <option value="btech-aiml">B.Tech (AIML)</option>
+                                <option value="btech-ds">B.Tech (DS)</option>
+                                <option value="btech-it">B.Tech (IT)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year">Year *</label>
+                            <select id="year" name="year" required>
+                                <option value="">--Select Year--</option>
+                                <option value="1st">1st Year</option>
+                                <option value="2nd">2nd Year</option>
+                                <option value="3rd">3rd Year</option>
+                                <option value="4th">4th Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Login Details -->
+                    <div class="form-section">
+                        <h3>Login Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="username">Username *</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button-group">
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="reset" class="reset-btn">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Recent Registrations -->
+        <section id="recent">
+            <h2 class="section-title">Recent Registrations</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahul Kumar</td>
+                            <td>B.Tech (CSE)</td>
+                            <td>2nd Year</td>
+                            <td>rahul@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Anjali Sharma</td>
+                            <td>B.Tech (AIML)</td>
+                            <td>1st Year</td>
+                            <td>anjali@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Contact us at <a href="mailto:abes@college.edu">abes@college.edu</a></p>
+        <p>© 2025 ABES EC, Ghaziabad</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration submitted successfully!');
+        });
+    </script>
+</body>
+</html>
